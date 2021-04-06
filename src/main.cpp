@@ -1,14 +1,14 @@
+// Copyright burgundypie 2021
+
 #include <iostream>
 #include <string>
 #include "train.h"
 
-int main() 
-{
+int main() {
 	return 0;
 	Train train;
 	srand(time(NULL));
-	for (size_t i = 0; i < std::rand() % 10; ++i) 
-	{
+	for (size_t i = 0; i < std::rand() % 10; ++i) {
 		int temp = std::rand() % 2;
 		if (temp)
 			train.addCage(true);

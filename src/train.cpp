@@ -1,16 +1,15 @@
+// Copyright burgundypie 2021
+
 #include "train.h"
 
-Cage::~Cage() 
-{
+Cage::~Cage() {
 	delete this;
 }
 
-void Train::addCage(bool light) 
-{
+void Train::addCage(bool light) {
 	Cage* newCage = new Cage();
 	newCage->setLight(light);
-	if (!first) 
-	{
+	if (!first) {
 		first = newCage;
 		last = newCage;
 		newCage->next = newCage;
@@ -24,17 +23,14 @@ void Train::addCage(bool light)
 	last = newCage;
 }
 
-size_t Train::length() 
-{
+size_t Train::length() {
 	first->off();
 	Cage* ptr = first;
 	size_t i = 0;
-	while (true) 
-	{
+	while (true) {
 		ptr = ptr->next;
 		++i;
-		if (ptr->get() == false) 
-		{
+		if (ptr->get() == false) {
 			ptr->on();
 			if (first->get() == true)
 				return i;
@@ -42,12 +38,10 @@ size_t Train::length()
 	}
 }
 
-void Train::printInfo() 
-{
+void Train::printInfo() {
 	Cage* ptr = first;
 	size_t i = 0;
-	while (true) 
-	{
+	while (true) {
 		std::cout << "Cage #" << i << ", light: " << ptr->get() << std::endl;
 		ptr = ptr->next;
 		++i;
