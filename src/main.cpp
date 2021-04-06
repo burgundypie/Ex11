@@ -21,5 +21,5 @@ int main()
 	std::cout << "After algotithm:" << '\n' << std::endl;
 	train.printInfo();
 	return 0;
-  return 0;
+  //return 0;
 }
