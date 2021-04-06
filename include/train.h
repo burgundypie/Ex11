@@ -10,14 +10,14 @@
 class Cage {
  bool light;
 public :
-	Cage * next;
-	Cage * prev;
-	Cage () : light(false), next(nullptr), prev(nullptr) {}
-	~Cage ();
-	void on () { light = true; }
-	void off () { light = false; }
-	bool get () const { return light; }
-	void setLight (bool l) { light = l; }
+ Cage * next;
+ Cage * prev;
+ Cage () : light(false), next(nullptr), prev(nullptr) {}
+ ~Cage ();
+ void on () { light = true; }
+ void off () { light = false; }
+ bool get () const { return light; }
+ void setLight (bool l) { light = l; }
 } ;
 
 class Train {
