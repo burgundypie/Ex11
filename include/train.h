@@ -8,7 +8,7 @@
 #include <ctime>
 
 class Cage {
-	bool light ;
+ bool light;
 public :
 	Cage * next;
 	Cage * prev;
