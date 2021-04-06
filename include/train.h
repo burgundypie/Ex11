@@ -1,3 +1,5 @@
+// Copyright burgundypie 2021
+
 #ifndef INCLUDE_TRAIN_H_
 #define INCLUDE_TRAIN_H_
 
@@ -5,7 +7,7 @@
 #include <cstdlib>
 #include <ctime>
 
-class Cage{
+class Cage {
 	bool light;
 public :
 	Cage * next;
@@ -18,7 +20,7 @@ public :
 	void setLight (bool l) { light = l; }
 } ;
 
-class Train{
+class Train {
 private:
 	Cage * first;
 	Cage * last;
@@ -27,8 +29,8 @@ public:
 	void addCage (bool light);
 	void printInfo ();
 	size_t length ();
-	Cage* getFirst () const { return first; }
-	Cage* getLast () const { return last; }
+	Cage * getFirst () const { return first; }
+	Cage * getLast () const { return last; }
 } ;
 
 #endif // INCLUDE_TRAIN_H_
